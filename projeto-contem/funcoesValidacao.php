@@ -1,25 +1,4 @@
 <?php
-    function validaMatricula($matricula)
-    {
-        $msgErro = "Matrícula.";
-        if(strlen($matricula) != 6 || !ctype_alnum($matricula)){
-            return $msgErro;
-        }
-        else{
-            $numerico=0;
-            for($cont = 0;$cont< strlen($matricula);$cont++)
-            {
-                if (is_numeric($matricula[$cont])){
-                    $numerico++;
-                }
-            }
-            if($numerico != 4){
-                echo $numerico; 
-                return $msgErro;
-            } 
-            
-        } 
-    }
     function validaCpf($cpf)
     {
         $msgErro = "CPF.";
@@ -46,6 +25,33 @@
             return $msgErro;
         }
     }
+
+
+    // **************************
+
+
+    function validaMatricula($matricula)
+    {
+        $msgErro = "Matrícula.";
+        if(strlen($matricula) != 6 || !ctype_alnum($matricula)){
+            return $msgErro;
+        }
+        else{
+            $numerico=0;
+            for($cont = 0;$cont< strlen($matricula);$cont++)
+            {
+                if (is_numeric($matricula[$cont])){
+                    $numerico++;
+                }
+            }
+            if($numerico != 4){
+                echo $numerico; 
+                return $msgErro;
+            } 
+            
+        } 
+    }
+
     function validaAnoMatricula($anoMatricula)
     {
         $msgErro = "Ano de Matrícula.";

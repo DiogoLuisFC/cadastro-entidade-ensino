@@ -8,13 +8,16 @@
     $n_mae = $_POST["n_mae"];
     $email = $_POST["email"];
     $telefone = $_POST["telefone"];
+
     $formacao = $_POST["formacao"];
     $instituicao = $_POST["instituicao"];
+
     $logradouro = $_POST["logradouro"];
     $numero = $_POST["numero"];
     $bairro = $_POST["bairro"];
     $cidade = $_POST["cidade"];
     $estado = $_POST["estado"];
+
     require_once('funcoesValidacao.php');
     if(validaMatricula($matricula)!= ""){
         $msgErro[] = validaMatricula($matricula);
@@ -49,7 +52,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro - Professor</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="box">

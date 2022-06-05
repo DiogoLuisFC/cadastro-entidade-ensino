@@ -1,21 +1,25 @@
+
 <?php
     $nome = $_POST["nome"];
     $matricula = $_POST["matricula"];
     $cpf = $_POST["cpf"];
     $rg = $_POST["rg"];
-    $nascimento = $_POST["nascimento"];;
+    $nascimento = $_POST["nascimento"];
     $sexo = $_POST["sexo"];
     $n_mae = $_POST["n_mae"];
     $email = $_POST["email"];
     $telefone = $_POST["telefone"];
+
     $curso = $_POST["curso"];
     $turno = $_POST["turno"];
     $ano_matricula = $_POST["ano_matricula"];
+
     $logradouro = $_POST["logradouro"];
     $numero = $_POST["numero"];
     $bairro = $_POST["bairro"];
     $cidade = $_POST["cidade"];
     $estado = $_POST["estado"];
+    
     require_once('funcoesValidacao.php');
     if(validaMatricula($matricula)!= ""){
         $msgErro[] = validaMatricula($matricula);
@@ -51,7 +55,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro - Aluno</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="box">

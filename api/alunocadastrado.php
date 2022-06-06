@@ -44,7 +44,7 @@
         // $_SESSION['erro'] = implode( "", $msgErro );
         $_SESSION['erro'] =  $msgErro ;
         // header('location: errovalidacao.php');  
-        ?><script>alert(<?php $_SESSION['erro'] ?>);</script><?php
+        ?><script>alert(<?php $msgErro ?>);</script><?php
     }
 ?>
 <!DOCTYPE html>

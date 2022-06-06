@@ -18,6 +18,7 @@
     $cidade = $_POST["cidade"];
     $estado = $_POST["estado"];
     require_once('funcoesValidacao.php');
+    $msgErro[] = array();
     if(validaMatricula($matricula)!= ""){
         $msgErro[] = validaMatricula($matricula);
     }
@@ -41,8 +42,8 @@
     }
     if(!empty($msgErro)){
         
-        // $_SESSION['erro'] = implode( "", $msgErro );
-        $_SESSION['erro'] =  $msgErro ;
+        $_SESSION['erro'] = implode( "", $msgErro );
+        // $_SESSION['erro'] =  $msgErro ;
         // header('location: errovalidacao.php');  
         ?><script>alert(<?php $msgErro ?>);</script><?php
     }

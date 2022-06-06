@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $msgErro = explode(".",$_SESSION['erro'] ?? '');
+    $msgErro = explode(".",$_SESSION['erro']);
 ?>
 
 <!DOCTYPE html>

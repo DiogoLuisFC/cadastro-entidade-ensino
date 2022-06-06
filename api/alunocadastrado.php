@@ -43,7 +43,8 @@
         
         // $_SESSION['erro'] = implode( "", $msgErro );
         $_SESSION['erro'] =  $msgErro ;
-        header('location: errovalidacao.php');  
+        // header('location: errovalidacao.php');  
+        ?><script>alert('teste');</script><?php
     }
 ?>
 <!DOCTYPE html>

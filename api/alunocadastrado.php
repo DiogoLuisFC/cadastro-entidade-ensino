@@ -41,7 +41,8 @@
     }
     if(!empty($msgErro)){
         
-        $_SESSION['erro'] = implode( "", $msgErro );
+        // $_SESSION['erro'] = implode( "", $msgErro );
+        $_SESSION['erro'] =  $msgErro ;
         header('location: errovalidacao.php');  
     }
 ?>

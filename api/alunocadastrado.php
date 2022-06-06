@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $nome = $_POST["nome"];
     $matricula = $_POST["matricula"];
     $cpf = $_POST["cpf"];
@@ -39,7 +40,7 @@
         $msgErro[] = validaEstado($estado);
     }
     if(!empty($msgErro)){
-        session_start();
+        
         $_SESSION['erro'] = implode( "", $msgErro );
         header('location: errovalidacao.php');  
     }
